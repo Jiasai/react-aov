@@ -22,7 +22,7 @@ class Login extends Component {
     this.passwordinputWrite = this.passwordinputWrite.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
     this.KeyUpLogin = this.KeyUpLogin.bind(this);
-    this.isLoginPush = this.isLoginPush.bind(this);
+    this.isLoginPushVip = this.isLoginPushVip.bind(this);
   }
   handleModalShow() {
     //显示modal
@@ -80,7 +80,7 @@ class Login extends Component {
         }
       });
   }
-  isLoginPush() {
+  isLoginPushVip() {
     if (this.state?.login) {
       //判断已经登录
       this.props.history.push("/vip");
@@ -127,7 +127,7 @@ class Login extends Component {
           )}
           <Button
             type="primary"
-            onClick={this.isLoginPush}
+            onClick={this.isLoginPushVip}
             style={{ marginLeft: 10 }}
           >
             vip
